@@ -49,13 +49,13 @@ function sum(numbers) {
     let sum = 0;
     for (let i=0; i<numbers.length; i++) {
       if (typeof numbers[i] === 'number') {
-      sum += numbers[i];
+        sum += numbers[i];
       } 
       else if (typeof numbers[i] === 'string') {
-      sum += numbers[i].length;
+        sum += numbers[i].length;
       } 
       else if (typeof numbers[i] === 'boolean') {
-      sum += numbers[i] ? 1 : 0;
+        sum += numbers[i] ? 1 : 0;
       } 
       else {
       throw new Error('Unsupported data type');
@@ -92,8 +92,8 @@ function averageWordLength(arr) {
     for (let i=0; i<arr.length; i++) {
       sum += arr[i].length;
     }
-    let avg = sum / arr.length;
-    return avg;
+    let average = sum / arr.length;
+    return average;
   }
 }
 
@@ -101,20 +101,7 @@ function averageWordLength(arr) {
 function avg(arr) {
   if (arr.length == 0)  {return null;}
   else {
-    let sum = 0;
-    for (let i=0; i<arr.length; i++) {
-      if (typeof arr[i] === 'number') {
-      sum += arr[i];
-      } 
-      else if (typeof arr[i] === 'string') {
-      sum += arr[i].length;
-      } 
-      else if (typeof arr[i] === 'boolean') {
-      sum += arr[i] ? 1 : 0;
-      } 
-    }
-    let avg = sum / arr.length;
-    return avg;
+    return sum(arr) / arr.length;
   }
 }
 
